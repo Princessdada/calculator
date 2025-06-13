@@ -51,15 +51,11 @@ function displayButton(e) {
   }
   if (justEvaluated) {
     if (isOperator) {
-      displayBox.textContent += `${buttonText}`; //appends only operator symbol after clicking the equal sign
+      displayBox.textContent += buttonText; //appends only operator symbol after clicking the equal sign
     } else if (isNumber) {
       displayBox.textContent = buttonText; // starts aftresh if the user clicks a number after the equal sign
     }
     justEvaluated = false;
-  }
-  // Add spacing for operators only
-  if (isOperator) {
-    displayBox.textContent += `${buttonText}`;
   } else {
     displayBox.textContent += buttonText;
   }
